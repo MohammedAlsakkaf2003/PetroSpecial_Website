@@ -1,173 +1,356 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="عروضنا ومنتجاتنا - PetroSpecial | بتروسبيشل" />
-        <title>العروض - PetroSpecial | بتروسبيشل</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/logos/main-logo.png" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logos/main-logo.png" alt="PetroSpecial Logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    القائمة
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">معلومات عنا</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="offerings.html">العروض</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>منتجات بتروسبيشل | الكتالوج الشامل</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logos/main-logo.png" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    
+    <style>
+        /* تحسينات الكروت */
+        .product-card {
+            border: 1px solid #eee; border-radius: 8px; overflow: hidden;
+            background: #fff; margin-bottom: 20px; transition: 0.3s;
+        }
+        .product-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-color: #fed136; }
+        .product-img-box {
+            height: 200px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 10px;
+        }
+        .product-img-box img { max-height: 100%; max-width: 100%; }
+        .product-info { padding: 15px; text-align: center; }
+        .product-info h5 { font-size: 1.1rem; margin-bottom: 5px; font-weight: bold; }
+        .product-info p { font-size: 0.9rem; color: #666; margin: 0; }
+        
+        /* تحسينات الأكورديون (القوائم المنسدلة) */
+        .accordion-button:not(.collapsed) {
+            background-color: #fed136; color: #000; font-weight: bold;
+        }
+        .accordion-button:focus { box-shadow: none; border-color: rgba(0,0,0,.125); }
+        .sub-category-title {
+            border-right: 4px solid #fed136; padding-right: 10px; margin: 20px 0 15px 0; font-weight: bold; color: #333;
+        }
+        
+        /* التبويبات الرئيسية */
+        .nav-pills .nav-link.active { background-color: #212529; color: #fed136; }
+        .nav-pills .nav-link { color: #555; font-weight: bold; font-size: 1.1rem; padding: 10px 20px; }
+    </style>
+</head>
+
+<body id="page-top" class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logos/main-logo.png" alt="PetroSpecial" style="height: 50px; background: rgba(255,255,255,0.9); padding: 5px; border-radius: 5px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                القائمة <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="offerings.html">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="background-color: #1a1a1a; padding-top: 140px; padding-bottom: 60px; height: auto; min-height: auto;">
+        <div class="container text-center text-white">
+            <h1 class="text-uppercase mb-2">كتالوج المنتجات</h1>
+            <p class="text-muted fs-5">تصفح شجرة منتجاتنا الكاملة</p>
+        </div>
+    </header>
+
+    <section class="page-section">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col-12">
+                    <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" id="tab-special" data-bs-toggle="pill" data-bs-target="#content-special" type="button">سبيشل (Special)</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="tab-petro" data-bs-toggle="pill" data-bs-target="#content-petro" type="button">بتروتوريون (Petrotoryon)</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="tab-raval" data-bs-toggle="pill" data-bs-target="#content-raval" type="button">رافال (Raval)</button>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-        
-        <!-- Main Content Section -->
-        <section class="page-section bg-light">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">منتجاتنا وعروضنا</h2>
-                    <h3 class="section-subheading text-muted">اكتشف مجموعتنا المتميزة من زيوت التشحيم.</h3>
-                </div>
-                <!-- !!! START EDITING HERE !!! -->
-                <!-- This is a product grid. Copy the "col-lg-4" block for each product you have. -->
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" href="#product1" data-bs-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." /> <!-- Replace with your product image -->
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">اسم المنتج 1</div>
-                                <div class="portfolio-caption-subheading text-muted">وصف قصير للمنتج</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" href="#product2" data-bs-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." /> <!-- Replace with your product image -->
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">اسم المنتج 2</div>
-                                <div class="portfolio-caption-subheading text-muted">وصف قصير للمنتج</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" href="#product3" data-bs-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." /> <!-- Replace with your product image -->
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">اسم المنتج 3</div>
-                                <div class="portfolio-caption-subheading text-muted">وصف قصير للمنتج</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product Modals -->
-                <div class="portfolio-modal modal fade" id="product1" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/close-icon.svg" alt="Close modal" /></div>
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h2 class="text-uppercase">اسم المنتج 1</h2>
-                                        <p class="item-intro text-muted">وصف قصير للمنتج.</p>
-                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                        <p>تفاصيل أكثر عن المنتج 1...</p>
-                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                            إغلاق
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-modal modal fade" id="product2" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/close-icon.svg" alt="Close modal" /></div>
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h2 class="text-uppercase">اسم المنتج 2</h2>
-                                        <p class="item-intro text-muted">وصف قصير للمنتج.</p>
-                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                        <p>تفاصيل أكثر عن المنتج 2...</p>
-                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                            إغلاق
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-modal modal fade" id="product3" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/close-icon.svg" alt="Close modal" /></div>
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h2 class="text-uppercase">اسم المنتج 3</h2>
-                                        <p class="item-intro text-muted">وصف قصير للمنتج.</p>
-                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                        <p>تفاصيل أكثر عن المنتج 3...</p>
-                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                            إغلاق
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- !!! STOP EDITING HERE !!! -->
-            </div>
-        </section>
 
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">حقوق النشر &copy; 2025 PetroSpecial | بتروسبيشل</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/altshhym?t=8sbwEKy-3osHLROOBz7v2gu0026s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/share/1CiEcTSzvf/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/petrospecial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@MohammedAlsakkaf-x6y" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end"></div>
-                </div>
-            </div>
-        </footer>
+            <div class="tab-content" id="pills-tabContent">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+                <div class="tab-pane fade show active" id="content-special">
+                    <div class="accordion" id="accordionSpecial">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    سوبر سبيشل (Super Special)
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionSpecial">
+                                <div class="accordion-body">
+                                    
+                                    <h4 class="sub-category-title">زيوت سيارات البنزين</h4>
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/gas-10w30.jpg" alt="10W30"></div>
+                                                <div class="product-info"><h5>10W-30</h5><p>سوبر سبيشل بنزين</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/gas-20w50.jpg" alt="20W50"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>سوبر سبيشل بنزين</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/gas-5w30.jpg" alt="5W30"></div>
+                                                <div class="product-info"><h5>5W-30</h5><p>سوبر سبيشل بنزين</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="sub-category-title mt-4">زيوت سيارات الديزل</h4>
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/diesel-10w40.jpg" alt="10W40"></div>
+                                                <div class="product-info"><h5>10W-40</h5><p>سوبر سبيشل ديزل</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/diesel-20w50.jpg" alt="20W50"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>سوبر سبيشل ديزل</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/diesel-15w40.jpg" alt="15W40"></div>
+                                                <div class="product-info"><h5>15W-40</h5><p>سوبر سبيشل ديزل</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    منتجات الرديتر (Radiator)
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSpecial">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/radiator-green.jpg" alt="Green"></div>
+                                                <div class="product-info"><h5>ماء رديتر أخضر</h5><p>حماية ومبرد</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/radiator-red.jpg" alt="Red"></div>
+                                                <div class="product-info"><h5>ماء رديتر أحمر</h5><p>حماية ومبرد</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    زيوت الفرامل والجير (Brake & Gear)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionSpecial">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/brake.jpg" alt="Brake"></div>
+                                                <div class="product-info"><h5>زيت فرامل</h5><p>Brake Fluid</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/cvt.jpg" alt="CVT"></div>
+                                                <div class="product-info"><h5>زيت جير CVT</h5><p>ناقل حركة</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/special/atf.jpg" alt="ATF"></div>
+                                                <div class="product-info"><h5>زيت جير ATF</h5><p>ناقل حركة أوتوماتيك</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="content-petro">
+                    <div class="accordion" id="accordionPetro">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPetro1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePetro1">
+                                    براندات بتروتوريون المتعددة
+                                </button>
+                            </h2>
+                            <div id="collapsePetro1" class="accordion-collapse collapse show" data-bs-parent="#accordionPetro">
+                                <div class="accordion-body">
+                                    
+                                    <h5 class="sub-category-title">موتور أويل DLX</h5>
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/dlx-10w30.jpg" alt="DLX 10W30"></div>
+                                                <div class="product-info"><h5>10W-30</h5><p>Motor Oil DLX</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/dlx-20w50.jpg" alt="DLX 20W50"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>Motor Oil DLX</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="sub-category-title mt-4">ديزل توريون</h5>
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/toryon-diesel.jpg" alt="Toryon Diesel"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>ديزل توريون</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="sub-category-title mt-4 text-warning">الزيوت الذهبية (Golden Oils)</h5>
+                                    <p class="small text-muted mb-2">تصنيع خاص بجودة عالية</p>
+                                    
+                                    <h6 class="text-muted fw-bold">-- محركات البنزين:</h6>
+                                    <div class="row mb-3">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card border-warning">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/golden-10w30.jpg" alt="G 10W30"></div>
+                                                <div class="product-info"><h5>10W-30</h5><p>سوبر جولدن</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card border-warning">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/golden-20w50.jpg" alt="G 20W50"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>سوبر جولدن</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="text-muted fw-bold">-- محركات الديزل (رافال روفيلا):</h6>
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card border-warning">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/raval-diesel-20w50.jpg" alt="R 20W50"></div>
+                                                <div class="product-info"><h5>20W-50</h5><p>رافال روفيلا</p></div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPetro2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePetro2">
+                                    زيوت سوبر المكررة (Recycled Super Oils)
+                                </button>
+                            </h2>
+                            <div id="collapsePetro2" class="accordion-collapse collapse" data-bs-parent="#accordionPetro">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/super-turbo.jpg" alt="Turbo"></div>
+                                                <div class="product-info"><h5>سوبر توربو</h5></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/super-gt.jpg" alt="GT"></div>
+                                                <div class="product-info"><h5>سوبر جي تي</h5></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="product-card">
+                                                <div class="product-img-box"><img src="assets/img/products/petro/super-p2.jpg" alt="P2"></div>
+                                                <div class="product-info"><h5>سوبر بي تو P2</h5></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="content-raval">
+                    <h4 class="sub-category-title text-success">منتجات رافال (Raval)</h4>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <div class="product-card border-success">
+                                <div class="product-img-box"><img src="assets/img/products/raval/10w30.jpg" alt="10W30"></div>
+                                <div class="product-info"><h5>10W-30</h5><p>رافال</p></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="product-card border-success">
+                                <div class="product-img-box"><img src="assets/img/products/raval/20w50.jpg" alt="20W50"></div>
+                                <div class="product-info"><h5>20W-50</h5><p>رافال</p></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="product-card border-success">
+                                <div class="product-img-box"><img src="assets/img/products/raval/5w30.jpg" alt="5W30"></div>
+                                <div class="product-info"><h5>5W-30</h5><p>رافال</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container text-center">
+            حقوق النشر &copy; 2025 PetroSpecial | بتروسبيشل
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
 </html>

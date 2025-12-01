@@ -12,6 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* 1. تكبير الشعار والكبسولة */
+        .navbar-brand img {
+            /* التحكم في حجم الشعار */
+            height: 80px !important; /* كان 50، جعلناه 80 ليصبح كبيراً */
+            
+            /* التحكم في حجم الكبسولة البيضاء */
+            padding: 12px 20px; /* مساحة بيضاء أكبر حول الشعار */
+            
+            /* تجميل الكبسولة */
+            background-color: rgba(255, 255, 255, 0.95); /* أبيض ناصع */
+            border-radius: 12px; /* زوايا أكثر دائرية */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ظل خفيف للكبسولة لإبرازها */
+            
+            /* تأثير حركي ناعم عند التغيير */
+            transition: all 0.3s ease;
+        }
+
+        /* 2. طبقة التعتيم الخلفية (لتحسين قراءة النص) */
+        header.masthead {
+            position: relative;
+            z-index: 1; 
+        }
+        header.masthead::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.60); /* نسبة سواد 60% */
+            z-index: -1;
+        }
+
+        /* 3. إبراز النصوص بالظل */
+        header.masthead .masthead-heading,
+        header.masthead .masthead-subheading,
+        header.masthead p {
+            text-shadow: 2px 2px 8px #000000; /* ظل أسود قوي */
+            color: #ffffff !important;
+        }
+    </style>
 </head>
 
 <body id="page-top">
