@@ -50,6 +50,67 @@
             text-shadow: 2px 2px 8px #000000; /* ظل أسود قوي */
             color: #ffffff !important;
         }
+      /* --- بداية كود الزر الجديد --- */
+        .btn-call-modern {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* مسافة بين الايقونة والنص */
+            margin-top: 25px; /* مسافة لفصل الزر عن الزر العلوي */
+            padding: 15px 35px;
+            background: rgba(0, 0, 0, 0.6); /* خلفية داكنة نصف شفافة */
+            border: 2px solid #ffc800; /* إطار بلون هوية الشركة */
+            border-radius: 50px; /* حواف دائرية حديثة */
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px); /* تأثير الزجاج */
+        }
+
+        .btn-call-modern:hover {
+            background: #ffc800; /* تحول الخلفية للون الذهبي عند اللمس */
+            color: #000; /* النص يصبح أسود */
+            transform: translateY(-5px); /* حركة خفيفة للأعلى */
+            box-shadow: 0 10px 25px rgba(255, 200, 0, 0.4); /* توهج */
+        }
+
+        /* تنسيق النصوص داخل الزر */
+        .btn-content {
+            text-align: right;
+            line-height: 1.2;
+        }
+        .btn-label {
+            display: block;
+            font-size: 1.30rem;
+            opacity: 0.9;
+            font-family: 'Tajawal', sans-serif;
+        }
+        .btn-number {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            direction: ltr; /* لضمان ظهور الرقم بشكل صحيح */
+        }
+
+        /* تأثير اهتزاز أيقونة الهاتف */
+        .phone-icon-anim {
+            font-size: 1.5rem;
+            animation: ring 2s infinite;
+        }
+
+        @keyframes ring {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(15deg); }
+            40% { transform: rotate(-15deg); }
+            50% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+        /* --- نهاية كود الزر الجديد --- */
     </style>
 </head>
 
@@ -81,6 +142,16 @@
             <div class="masthead-heading text-uppercase">فخر الصناعة السعودية <br> بمواصفات عالمية</div>
             <p class="text-white mb-4 fs-5">زيوت بكر 100% لحماية فائقة وأداء يدوم طويلاً</p>
             <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">تصفح المنتجات</a>
+            
+            <br>
+
+            <a class="btn-call-modern" href="tel:+966556976912">
+                <i class="fas fa-phone phone-icon-anim"></i>
+                <div class="btn-content">
+                    <span class="btn-label">تواصل معنا الآن</span>
+                    <span class="btn-number">+966 556976912</span>
+                </div>
+            </a>
         </div>
     </header>
 
