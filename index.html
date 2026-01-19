@@ -16,16 +16,21 @@
         /* 1. تكبير الشعار والكبسولة */
         .navbar-brand img {
             /* التحكم في حجم الشعار */
-            height: 80px !important; /* كان 50، جعلناه 80 ليصبح كبيراً */
-            
+            height: 80px !important;
+            /* كان 50، جعلناه 80 ليصبح كبيراً */
+
             /* التحكم في حجم الكبسولة البيضاء */
-            padding: 12px 20px; /* مساحة بيضاء أكبر حول الشعار */
-            
+            padding: 12px 20px;
+            /* مساحة بيضاء أكبر حول الشعار */
+
             /* تجميل الكبسولة */
-            background-color: rgba(255, 255, 255, 0.95); /* أبيض ناصع */
-            border-radius: 12px; /* زوايا أكثر دائرية */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ظل خفيف للكبسولة لإبرازها */
-            
+            background-color: rgba(255, 255, 255, 0.95);
+            /* أبيض ناصع */
+            border-radius: 12px;
+            /* زوايا أكثر دائرية */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* ظل خفيف للكبسولة لإبرازها */
+
             /* تأثير حركي ناعم عند التغيير */
             transition: all 0.3s ease;
         }
@@ -33,13 +38,18 @@
         /* 2. طبقة التعتيم الخلفية (لتحسين قراءة النص) */
         header.masthead {
             position: relative;
-            z-index: 1; 
+            z-index: 1;
         }
+
         header.masthead::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.60); /* نسبة سواد 60% */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.60);
+            /* نسبة سواد 60% */
             z-index: -1;
         }
 
@@ -47,33 +57,45 @@
         header.masthead .masthead-heading,
         header.masthead .masthead-subheading,
         header.masthead p {
-            text-shadow: 2px 2px 8px #000000; /* ظل أسود قوي */
+            text-shadow: 2px 2px 8px #000000;
+            /* ظل أسود قوي */
             color: #ffffff !important;
         }
-      /* --- بداية كود الزر الجديد --- */
+
+        /* --- بداية كود الزر الجديد --- */
         .btn-call-modern {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 15px; /* مسافة بين الايقونة والنص */
-            margin-top: 25px; /* مسافة لفصل الزر عن الزر العلوي */
+            gap: 15px;
+            /* مسافة بين الايقونة والنص */
+            margin-top: 25px;
+            /* مسافة لفصل الزر عن الزر العلوي */
             padding: 15px 35px;
-            background: rgba(0, 0, 0, 0.6); /* خلفية داكنة نصف شفافة */
-            border: 2px solid #ffc800; /* إطار بلون هوية الشركة */
-            border-radius: 50px; /* حواف دائرية حديثة */
+            background: rgba(0, 0, 0, 0.6);
+            /* خلفية داكنة نصف شفافة */
+            border: 2px solid #ffc800;
+            /* إطار بلون هوية الشركة */
+            border-radius: 50px;
+            /* حواف دائرية حديثة */
             color: #fff;
             text-decoration: none;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(5px); /* تأثير الزجاج */
+            backdrop-filter: blur(5px);
+            /* تأثير الزجاج */
         }
 
         .btn-call-modern:hover {
-            background: #ffc800; /* تحول الخلفية للون الذهبي عند اللمس */
-            color: #000; /* النص يصبح أسود */
-            transform: translateY(-5px); /* حركة خفيفة للأعلى */
-            box-shadow: 0 10px 25px rgba(255, 200, 0, 0.4); /* توهج */
+            background: #ffc800;
+            /* تحول الخلفية للون الذهبي عند اللمس */
+            color: #000;
+            /* النص يصبح أسود */
+            transform: translateY(-5px);
+            /* حركة خفيفة للأعلى */
+            box-shadow: 0 10px 25px rgba(255, 200, 0, 0.4);
+            /* توهج */
         }
 
         /* تنسيق النصوص داخل الزر */
@@ -81,18 +103,21 @@
             text-align: right;
             line-height: 1.2;
         }
+
         .btn-label {
             display: block;
             font-size: 1.30rem;
             opacity: 0.9;
             font-family: 'Tajawal', sans-serif;
         }
+
         .btn-number {
             display: block;
             font-size: 1.2rem;
             font-weight: 700;
             font-family: 'Montserrat', sans-serif;
-            direction: ltr; /* لضمان ظهور الرقم بشكل صحيح */
+            direction: ltr;
+            /* لضمان ظهور الرقم بشكل صحيح */
         }
 
         /* تأثير اهتزاز أيقونة الهاتف */
@@ -102,14 +127,271 @@
         }
 
         @keyframes ring {
-            0% { transform: rotate(0deg); }
-            10% { transform: rotate(15deg); }
-            20% { transform: rotate(-15deg); }
-            30% { transform: rotate(15deg); }
-            40% { transform: rotate(-15deg); }
-            50% { transform: rotate(0deg); }
-            100% { transform: rotate(0deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(15deg);
+            }
+
+            40% {
+                transform: rotate(-15deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
+
+        /* --- بداية كود قسم الشركاء --- */
+        .partners-section {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .partner-item {
+            flex: 0 1 180px;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transform: translateY(20px);
+            cursor: pointer;
+        }
+
+        .partner-item.active {
+            opacity: 0.8;
+            filter: grayscale(0%);
+            transform: translateY(0);
+        }
+
+        .partner-item:hover {
+            transform: scale(1.1) translateY(-5px);
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .partner-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* --- نهاية كود قسم الشركاء --- */
+        /* --- بداية كود تصميم وتحسين الـ UI/UX (غير مدمر) --- */
+        :root {
+            --section-padding: 100px;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* تحسين التباعد بين الأقسام */
+        .page-section {
+            padding: var(--section-padding) 0 !important;
+        }
+
+        /* تحسين قراءة النصوص العربية */
+        p.text-muted,
+        p.large {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-heading {
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-subheading {
+            font-size: 1.2rem !important;
+            margin-bottom: 4rem !important;
+            font-weight: 400;
+        }
+
+        /* تأثيرات حركية ناعمة للعناصر التفاعلية */
+        a,
+        .btn,
+        .portfolio-item,
+        .partner-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* تحسين قسم الشركاء المدمج */
+        .partners-section {
+            background-color: #fdfdfd;
+            /* لون أبيض مائل قليلاً للتمييز البسيط */
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            /* مسافة أوسع قليلاً للمزيد من التنفس */
+            margin-top: 20px;
+        }
+
+
+        /* --- تحسينات بصرية متقدمة (Progressive Enhancements) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+            pointer-events: none;
+            /* لمنع التداخل قبل الظهور */
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* تأخير متدرج للعناصر (Staggered Animation) */
+        .stagger-item {
+            transition-delay: calc(var(--delay) * 100ms);
+        }
+
+        /* تحسين سلاسة التمرير */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* تأثير زجاجي ناعم للهيدر عند التمرير */
+        .navbar-shrink {
+            backdrop-filter: blur(10px);
+            background-color: rgba(33, 37, 41, 0.9) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تحسين شكل الأزرار بتوهج خفيف */
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 200, 0, 0.3);
+        }
+
+        .btn-primary:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover:after {
+            left: 100%;
+            top: 100%;
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* تحسين تناسق مربعات المنتجات (Portfolio) */
+        .portfolio-item {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-link {
+            display: block;
+            position: relative;
+            height: 250px;
+            /* ارتفاع ثابت للمربع العلوي للحصول على مظهر متناسق */
+            overflow: hidden;
+        }
+
+        .portfolio-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* نستخدم contain للحفاظ على تفاصيل العبوات، أو cover إذا فضلنا ملء المساحة بالكامل */
+            background-color: #f8f9fa;
+            /* خلفية خفيفة خلف الصور */
+            padding: 20px;
+        }
+
+        .portfolio-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .portfolio-caption-heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', 'Tajawal', sans-serif;
+        }
+
+        .portfolio-caption-subheading {
+            font-style: italic;
+            font-family: 'Tajawal', sans-serif;
+        }
+
         /* --- نهاية كود الزر الجديد --- */
     </style>
 </head>
@@ -118,7 +400,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/logos/main-logo.png" alt="PetroSpecial Logo" style="height: 50px;" />
+                <img src="assets/img/logos/main-logo.png" alt="PetroSpecial Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,7 +410,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">منتجاتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offerings.html">منتجاتنا</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">معلومات عنا</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
@@ -142,7 +424,7 @@
             <div class="masthead-heading text-uppercase">فخر الصناعة السعودية <br> بمواصفات عالمية</div>
             <p class="text-white mb-4 fs-5">زيوت بكر 100% لحماية فائقة وأداء يدوم طويلاً</p>
             <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">تصفح المنتجات</a>
-            
+
             <br>
 
             <a class="btn-call-modern" href="tel:+966556976912">
@@ -152,17 +434,20 @@
                     <span class="btn-number">+966 556976912</span>
                 </div>
             </a>
+            <div class="mt-5">
+                <i class="fas fa-chevron-down text-white opacity-50 animated bounce" style="font-size: 1.5rem;"></i>
+            </div>
         </div>
     </header>
 
     <section class="page-section" id="services">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center reveal">
                 <h2 class="section-heading text-uppercase">لماذا بتروسبيشل؟</h2>
                 <h3 class="section-subheading text-muted">نضمن لك الأفضل لسيارتك ومعداتك.</h3>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-4 reveal" style="--delay: 1">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-shield-alt fa-stack-1x fa-inverse"></i>
@@ -171,7 +456,7 @@
                     <p class="text-muted">منتجاتنا حاصلة على شهادات الجودة العالمية ومصنعة وفق مواصفات أرامكو السعودية
                         لأقصى درجات التحمل.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal" style="--delay: 2">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-truck-fast fa-stack-1x fa-inverse"></i>
@@ -180,7 +465,7 @@
                     <p class="text-muted">نغطي المنطقة الغربية (جدة، مكة، المدينة، الطائف) ونصل لمحلات البناشر والشركات
                         بسرعة وكفاءة.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal" style="--delay: 3">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-oil-can fa-stack-1x fa-inverse"></i>
@@ -195,12 +480,12 @@
 
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center reveal">
                 <h2 class="section-heading text-uppercase">منتجاتنا المميزة</h2>
                 <h3 class="section-subheading text-muted">لمحة سريعة عن أفضل ما نقدمه.</h3>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-sm-6 mb-4 reveal" style="--delay: 1">
                     <div class="portfolio-item">
                         <div class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                             <img class="img-fluid" src="assets/img/products/product-1.jpg" alt="زيت سوبر سبيشل" />
@@ -211,10 +496,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-sm-6 mb-4 reveal" style="--delay: 2">
                     <div class="portfolio-item">
                         <div class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" src="assets/img/products/product-2.jpg" alt="زيت تخليقي عالي الجودة" />
+                            <img class="img-fluid" src="assets/img/products/product-2.jpg"
+                                alt="زيت تخليقي عالي الجودة" />
                         </div>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Synthetic Special 5W-30 </div>
@@ -222,7 +508,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-sm-6 mb-4 reveal" style="--delay: 3">
                     <div class="portfolio-item">
                         <div class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                             <img class="img-fluid" src="assets/img/products/product-3.jpg" alt="API SL 5W-30" />
@@ -240,13 +526,37 @@
         </div>
     </section>
 
+    <!-- Partners Section -->
+    <section class="page-section partners-section" id="partners">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">شركاؤنا الموثوقون</h2>
+                <h3 class="section-subheading text-muted">نفخر بالتعاون مع كبرى الشركات العالمية لتقديم أفضل جودة.</h3>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="assets/img/partners/afton.png" alt="Afton Chemical Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/infineum.png" alt="Infineum Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/lubrizol.png" alt="Lubrizol Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/chevron.png" alt="Chevron Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="page-section" id="about-snippet">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">قصة بتروسبيشل</h2>
                 <h3 class="section-subheading text-muted">من قلب جدة إلى كل محرك في المملكة.</h3>
             </div>
-            <div class="row">
+            <div class="row reveal">
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted">
                         تأسست شركة بتروسبيشل عام 2020 في طريق مكة القديم بجدة، برؤية واضحة: تقديم زيوت محركات تنافس
@@ -288,6 +598,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        // Unified Reveal-on-Scroll System
+        document.addEventListener('DOMContentLoaded', function () {
+            const revealElements = document.querySelectorAll('.reveal, .partner-item');
+
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Adding a slight delay based on the stagger property if it exists
+                        const delay = entry.target.style.getPropertyValue('--delay') || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, delay * 100);
+
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
