@@ -1,75 +1,411 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="معلومات عنا - PetroSpecial | بتروسبيشل" />
-        <title>معلومات عنا - PetroSpecial | بتروسبيشل</title>
-        <link rel="icon" type="image/x-icon" href="https://petrospecial.com/wp-content/uploads/2025/07/cropped-تصميمين-لمنتج-سبيشل-2024-1-8-scaled-1-32x32.png" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top" class="has-sticky-footer">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logos/main-logo.png" alt="PetroSpecial" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    القائمة
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="about.html">معلومات عنا</a></li>
-                        <li class="nav-item"><a class="nav-link" href="offerings.html">العروض</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-                    </ul>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="عن بتروسبيشل - PetroSpecial | قصة وتاريخ الشركة ورؤي المستقبل" />
+    <meta name="author" content="PetroSpecial" />
+    <title>من نحن | بتروسبيشل - PetroSpecial</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logos/main-logo.png" />
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet" type="text/css" />
+    <!-- Core Theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Page Specific Styles (Non-destructive) -->
+    <style>
+        /* Reusing Core Variables from Index */
+        :root {
+            --section-padding: 100px;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+            /* لون خلفية هادئ للصفحة */
+        }
+
+        /* --- Header Enhancements (Reused) --- */
+        .navbar-brand img {
+            height: 80px !important;
+            padding: 12px 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        header.masthead {
+            position: relative;
+            z-index: 1;
+            /* Using the same background as index or a specific one for About */
+            /* Assuming same BG for consistency, or we can use an overlay color if no image specific */
+            background-image: url("assets/img/header-bg.jpeg");
+        }
+
+        header.masthead::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Slightly darker for text readability */
+            z-index: -1;
+        }
+
+        header.masthead .masthead-heading {
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        /* --- Section Styling (Harmonized) --- */
+        .page-section {
+            padding: var(--section-padding) 0 !important;
+        }
+
+        .section-heading {
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-subheading {
+            font-size: 1.2rem !important;
+            margin-bottom: 4rem !important;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* --- Typography Details --- */
+        p.text-muted,
+        p.large {
+            line-height: 1.9;
+            /* More breathable for story text */
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- Vision & Mission Cards --- */
+        .about-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            border-top: 5px solid #ffc800;
+            /* Brand Color Accent */
+            transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-icon {
+            font-size: 3rem;
+            color: #ffc800;
+            margin-bottom: 20px;
+        }
+
+        /* --- Unified Reveal Animation System (Copied from Index) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .stagger-item {
+            transition-delay: calc(var(--delay) * 150ms);
+        }
+
+        /* --- Partners Section (Reused) --- */
+        .partners-section {
+            background-color: #fff;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            padding: 80px 0;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .partner-item {
+            flex: 0 1 180px;
+            text-align: center;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .partner-item.active,
+        .partner-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .partner-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 70px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logos/main-logo.png" alt="PetroSpecial Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                القائمة
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">منتجاتنا</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">معلومات عنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading reveal">أكثر من مجرد زيوت</div>
+            <div class="masthead-heading text-uppercase reveal" style="--delay: 1">قصة نجاح سعودية</div>
+            <div class="row justify-content-center reveal" style="--delay: 2">
+                <div class="col-lg-8">
+                    <p class="text-white fs-5 mb-0">نلتزم في بتروسبيشل بأعلى معايير الجودة العالمية لنقدم للسوق السعودي
+                        زيوت محركات فائقة الأداء.</p>
                 </div>
             </div>
-        </nav>
-        
-        <!-- Main Content Section -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">معلومات عنا</h2>
-                    <h3 class="section-subheading text-muted">تعرف على قصة بتروسبيشل ورؤيتنا للمستقبل.</h3>
+        </div>
+    </header>
+
+    <!-- Section 1: Our Story (Narrative) -->
+    <section class="page-section" id="story">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center mb-5 reveal">
+                    <h2 class="section-heading text-uppercase">البداية والمسيرة</h2>
+                    <h3 class="section-subheading text-muted">من نحن ؟؟.</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <!-- !!! START EDITING HERE !!! -->
-                        <!-- Add your content for the About Us page below -->
-                        
-                        <p class="text-muted">أضف المحتوى الخاص بك هنا. يمكنك التحدث عن تاريخ الشركة، فريق العمل، القيم التي تتبنونها، وأهدافكم المستقبلية. استخدم الفقرات والصور لجعل الصفحة جذابة.</p>
-                        <p class="text-muted">يمكنك إضافة صور باستخدام الوسم `&lt;img src="path/to/your/image.jpg" class="img-fluid my-4" alt="..." /&gt;`</p>
-                        
-                        <!-- !!! STOP EDITING HERE !!! -->
+                <div class="col-lg-10 mx-auto reveal" style="--delay: 1">
+                    <div class="bg-white p-5 rounded-4 shadow-sm border-start border-5 border-warning">
+                        <p class="large text-muted mb-4">
+                            تأسست شركة <strong>بتروسبيشل</strong> عام 2020، وكانت انطلاقتنا من قلب جدة النابض، وتحديداً
+                            في طريق مكة القديم (كيلو 8). منذ اللحظة الأولى، وضعنا نصب أعيننا هدفاً واحداً: سد الفجوة في
+                            السوق المحلي عبر توفير منتجات زيوت وتشحيم تضاهي الماركات العالمية في الجودة وتتفوق عليها في
+                            فهم احتياجات الأجواء والتضاريس السعودية.
+                        </p>
+                        <p class="large text-muted mb-0">
+                            اليوم، وبفضل الله، نمت بتروسبيشل لتصبح اسماً موثوقاً لدى كبار الموزعين والشركات. نمتلك محفظة
+                            متنوعة من العلامات التجارية القوية مثل <strong>Special</strong>،
+                            <strong>Petrotoryon</strong>، و<strong>Raval</strong>، ونغطي بشبكة توزيعنا الواسعة جميع مدن
+                            المنطقة الغربية، مع خطط طموحة للتوسع في كافة أرجاء المملكة.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">حقوق النشر &copy; 2025 PetroSpecial | بتروسبيشل</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/altshhym?t=8sbwEKy-3osHLROOBz7v2gu0026s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/share/1CiEcTSzvf/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/petrospecial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@MohammedAlsakkaf-x6y" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <!-- Section 2: Vision & Mission (Cards) -->
+    <section class="page-section bg-light" id="vision">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-heading text-uppercase">رؤيتنا ورسالتنا</h2>
+            </div>
+            <div class="row">
+                <!-- Vision Card -->
+                <div class="col-md-6 mb-4 reveal" style="--delay: 1">
+                    <div class="about-card text-center">
+                        <i class="fas fa-eye about-icon"></i>
+                        <h4 class="my-3 font-weight-bold">الرؤية</h4>
+                        <p class="text-muted">
+                            أن نكون الخيار الأول والشريك المفضل لحلول الزيوت والتشحيم في المملكة، من خلال الابتكار
+                            المستمر والالتزام الصارم بمعايير الجودة العالمية ISO، لنساهم بفعالية في دعم قطاع النقل
+                            والصناعة ضمن رؤية المملكة 2030.
+                        </p>
                     </div>
-                    <div class="col-lg-4 text-lg-end"></div>
+                </div>
+                <!-- Mission Card -->
+                <div class="col-md-6 mb-4 reveal" style="--delay: 2">
+                    <div class="about-card text-center">
+                        <i class="fas fa-bullseye about-icon"></i>
+                        <h4 class="my-3 font-weight-bold">الرسالة</h4>
+                        <p class="text-muted">
+                            توفير زيوت "بكر" 100% ومضافات عالية الأداء تضمن حماية المحركات، تقليل استهلاك الوقود، وإطالة
+                            عمر المعدات، مع تقديم خدمة عملاء استثنائية وبناء علاقات شراكة طويلة الأمد مع عملائنا
+                            وموزعينا.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    <!-- Section 3: Values / Why Us (Reused from Index for consistency) -->
+    <section class="page-section" id="values">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-heading text-uppercase">قيمنا الراسخة</h2>
+                <h3 class="section-subheading text-muted">ركائز نجاحنا وثقة عملائنا.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 reveal" style="--delay: 1">
+                    <span class="fa-stack fa-4x mb-4">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">الجودة أولاً</h4>
+                    <p class="text-muted">لا نساوم أبداً. جميع منتجاتنا مصنعة من زيوت أساس بكر ومطابقة لمواصفات SASO و
+                        API العالمية.</p>
+                </div>
+                <div class="col-md-4 reveal" style="--delay: 2">
+                    <span class="fa-stack fa-4x mb-4">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">النزاهة</h4>
+                    <p class="text-muted">نؤمن بالشفافية الكاملة مع عملائنا وشركائنا. ما نعد به هو ما نقدمه، في كل عبوة
+                        وفي كل قطرة.</p>
+                </div>
+                <div class="col-md-4 reveal" style="--delay: 3">
+                    <span class="fa-stack fa-4x mb-4">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">خدمة المجتمع</h4>
+                    <p class="text-muted">نفتخر بكوننا شركة وطنية تساهم في الاقتصاد المحلي وتوفر فرص عمل وتدريب للشباب
+                        السعودي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Partners (Reused) -->
+    <section class="page-section partners-section" id="partners">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-heading text-uppercase">شركاء النجاح</h2>
+                <h3 class="section-subheading text-muted">تقنيات عالمية.. بأيدٍ سعودية.</h3>
+            </div>
+            <div class="partners-grid reveal" style="--delay: 1">
+                <div class="partner-item">
+                    <img src="assets/img/partners/afton.png" alt="Afton Chemical Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/infineum.png" alt="Infineum Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/lubrizol.png" alt="Lubrizol Logo" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/img/partners/chevron.png" alt="Chevron Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">
+                    حقوق النشر &copy; 2025 PetroSpecial
+                    <br>
+                    <small>المملكة العربية السعودية - جدة - طريق مكة القديم (كـ8)</small>
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-primary btn-social mx-2"
+                        href="https://x.com/altshhym?t=8sbwEKy-3osHLROOBz7v2gu0026s=09" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-social mx-2" href="https://www.facebook.com/share/1CiEcTSzvf/"
+                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-social mx-2" href="https://www.instagram.com/petrospecial/"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-primary btn-social mx-2" href="https://www.youtube.com/@MohammedAlsakkaf-x6y"
+                        target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-light text-decoration-none me-3" href="#!">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Unified Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar Shrink Effect logic (Duplicated here to ensure independence)
+            var navbarShrink = function () {
+                const navbarCollapsible = document.body.querySelector('#mainNav');
+                if (!navbarCollapsible) return;
+                if (window.scrollY === 0) {
+                    navbarCollapsible.classList.remove('navbar-shrink')
+                } else {
+                    navbarCollapsible.classList.add('navbar-shrink')
+                }
+            };
+            navbarShrink();
+            document.addEventListener('scroll', navbarShrink);
+
+            // Progressive Reveal Animation
+            const revealElements = document.querySelectorAll('.reveal, .partner-item');
+
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.style.getPropertyValue('--delay') || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, delay * 100);
+
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+
 </html>
